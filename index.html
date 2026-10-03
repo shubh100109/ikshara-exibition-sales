@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikshara Exhibition Sales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, #230408 0%, #120204 100%);
+      font-family: 'Outfit', sans-serif;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    /* Ambient background glow */
+    .ambient-glow {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(197, 155, 39, 0.12) 0%, rgba(86, 10, 22, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ikshara Royal Crimson & Gold Button */
+    .ikshara-btn {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 14px 34px;
+      background: linear-gradient(135deg, #450711 0%, #5e0c1b 50%, #751224 100%);
+      border: 1.5px solid #c59b27;
+      border-radius: 9999px;
+      text-decoration: none;
+      box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 4px 15px rgba(86, 10, 22, 0.4),
+        0 0 20px rgba(197, 155, 39, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+      transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+      cursor: pointer;
+    }
+
+    /* Ikshara Implanted Logo */
+    .ikshara-logo {
+      height: 28px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) brightness(1.05);
+      transition: transform 0.35s ease;
+    }
+
+    /* Divider */
+    .btn-divider {
+      width: 1px;
+      height: 22px;
+      background: linear-gradient(to bottom, transparent, rgba(197, 155, 39, 0.7), transparent);
+    }
+
+    /* Button Text */
+    .btn-text {
+      color: #fff9f0;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+      white-space: nowrap;
+    }
+
+    /* Arrow icon */
+    .btn-arrow {
+      width: 18px;
+      height: 18px;
+      stroke: #e8c35b;
+      stroke-width: 2.4;
+      fill: none;
+      transition: transform 0.35s ease, stroke 0.35s ease;
+    }
+
+    /* Hover State */
+    .ikshara-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      background: linear-gradient(135deg, #590916 0%, #730e21 50%, #8c162b 100%);
+      border-color: #f3d47c;
+      box-shadow: 
+        0 14px 40px rgba(0, 0, 0, 0.6),
+        0 6px 22px rgba(86, 10, 22, 0.5),
+        0 0 32px rgba(232, 195, 91, 0.45),
+        inset 0 1px 2px rgba(255, 255, 255, 0.35);
+    }
+
+    .ikshara-btn:hover .ikshara-logo {
+      transform: scale(1.05);
+    }
+
+    .ikshara-btn:hover .btn-arrow {
+      transform: translateX(4px);
+      stroke: #ffffff;
+    }
+
+    .ikshara-btn:active {
+      transform: translateY(0) scale(0.99);
+      box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.4),
+        0 0 15px rgba(197, 155, 39, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <!-- The Button -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcfKvTllFP3HwQZ0aFePb3gxJdmbv6p4oEW1r2itPNSl7M5Q/viewform" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="ikshara-btn">
+    <img src="Ikshara_fl-01.png" alt="Ikshara" class="ikshara-logo">
+    <span class="btn-divider"></span>
+    <span class="btn-text">Exhibition Sales</span>
+    <svg class="btn-arrow" viewBox="0 0 24 24">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+  </a>
+
+</body>
+</html>
